@@ -1,0 +1,36 @@
+[project]
+name = "hbbench"
+version = "0.1.0"
+description = "Deterministic Hash Sets vs. Randomized Bloom Filters for Set-Membership Testing (CS4523 project)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Chathurangi K.L. (220087R)" },
+    { name = "Navodi S.Y.A.C (220419N)" },
+]
+dependencies = [
+    "bitarray>=3.0",
+    "mmh3>=5.0",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "matplotlib>=3.9",
+    "seaborn>=0.13",
+    "psutil>=6.0",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ipykernel>=6.29",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hbbench"]
+
+[tool.uv]
+package = true
