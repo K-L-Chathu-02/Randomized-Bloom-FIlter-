@@ -5,6 +5,7 @@
     uv run scripts/run_benchmarks.py --mode real
     uv run scripts/run_benchmarks.py --mode both --full
 
+See `--help` for all options.
 """
 
 from __future__ import annotations
