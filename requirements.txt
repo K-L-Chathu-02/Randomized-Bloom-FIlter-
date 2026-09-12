@@ -1,0 +1,9 @@
+bitarray>=3.0
+mmh3>=5.0
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.9
+seaborn>=0.13
+psutil>=6.0
+tqdm>=4.66
+pytest>=8.0
