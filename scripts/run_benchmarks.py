@@ -16,8 +16,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from hbbench import benchmark_fpr, benchmark_latency, benchmark_memory, param_sensitivity, visualize  # noqa: E402
-from hbbench.data_loader import build_combined_real_url_pool, generate_synthetic_keys  # noqa: E402
+from hbbench import benchmark_fpr, benchmark_latency, benchmark_memory, param_sensitivity, visualize  
+from hbbench.data_loader import build_combined_real_url_pool, generate_synthetic_keys  
 
 TABLES_DIR = Path(__file__).resolve().parents[1] / "results" / "tables"
 
@@ -82,7 +82,7 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.full:
-        sizes = [1_000, 10_000, 100_000, 1_000_000]
+        sizes = [1_000, 10_000, 500_000, 800_000]
         fpr_sizes = [10_000, 50_000, 100_000, 250_000, 500_000, 1_000_000]
         param_n = 100_000
     else:

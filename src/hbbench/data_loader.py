@@ -58,9 +58,7 @@ def generate_synthetic_keys(
     rng = random.Random(seed)
     alphabet = string.ascii_letters + string.digits
     keys: set[str] = set()
-    # Generous upper bound on attempts to avoid an infinite loop if n is
-    # close to the space of possible strings at min_len (never happens in
-    # practice for n up to 10^6 with min_len >= 8).
+    
     max_attempts = n * 20
     attempts = 0
     while len(keys) < n and attempts < max_attempts:

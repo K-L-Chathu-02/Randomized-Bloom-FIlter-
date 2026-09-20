@@ -16,7 +16,7 @@ def run_latency_benchmark(
     *,
     target_fpr: float = 0.01,
     n_query_sample: int = 5_000,
-    n_trials: int = 5,
+    n_trials: int = 10,
 ) -> pd.DataFrame:
     """
     Parameters

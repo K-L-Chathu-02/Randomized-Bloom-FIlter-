@@ -31,7 +31,7 @@ def time_bulk_query(query_fn: Callable[[str], object], items: Iterable[str]) -> 
     return time.perf_counter() - start
 
 
-def repeated_trials(fn: Callable[[], float], n_trials: int = 5) -> dict:
+def repeated_trials(fn: Callable[[], float], n_trials: int = 10) -> dict:
     """Run a zero-arg timing function `n_trials` times and summarize.
 
     `fn` should return a duration in seconds (e.g. a call to
